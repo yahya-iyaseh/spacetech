@@ -1,21 +1,11 @@
-/**
-* Template Name: Regna - v4.7.0
-* Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-:root{
-    --main-color: #42C2FF;
+:root {
+    --main-color: #42c2ff;
     --main-color-focus: #07acf8;
 }
 body {
     background: #fff;
     color: #666666;
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
 }
 
 a {
@@ -42,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
     font-weight: 400;
     margin: 0 0 20px 0;
     padding: 0;
@@ -89,6 +79,31 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
+.skills {
+    list-style:none
+}
+
+.skills li{
+    margin: auto 1em;
+    display: inline;
+    text-align: left;
+
+}
+.box .skills{
+    font-size: .8rem;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.skills li::before{
+    content: "\2022";
+    color: var(--main-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -.4em;
+}
+
 #header {
     height: 90px;
     transition: all 0.5s;
@@ -99,7 +114,7 @@ h6 {
     font-size: 32px;
     margin: 0;
     line-height: 1;
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -117,7 +132,7 @@ h6 {
     background: transparent;
 }
 #header.header-scrolled {
-    background: rgba(52, 59, 64, 0.9);
+    background: #435861e0;
     height: 70px;
     transition: all 0.5s;
 }
@@ -154,7 +169,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
     color: #fff;
     font-size: 14px;
     padding: 0 4px;
@@ -357,7 +372,7 @@ h6 {
 #hero {
     width: 100%;
     height: 100vh;
-    background: url(../img/hero-bg.jpg) top center;
+    background: url(../img/workSpace.jpg) top center;
     background-size: cover;
     position: relative;
 }
@@ -414,7 +429,7 @@ h6 {
     }
 }
 #hero .btn-get-started {
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
     text-transform: uppercase;
     font-weight: 500;
     font-size: 16px;
@@ -511,7 +526,9 @@ section {
 }
 #about .about-container .background {
     min-height: 300px;
-    background: url(../img/about-img.jpg) center top no-repeat;
+    background: url(../img/laptopMobileSmall.jpg) center;
+    background-size: cover;
+    border-radius: 30px;
     margin-bottom: 10px;
 }
 #about .about-container .content {
@@ -521,6 +538,7 @@ section {
     color: #333;
     font-weight: 700;
     font-size: 32px;
+    text-align: left;
 }
 @media (max-width: 768px) {
     #about .about-container .title {
@@ -597,12 +615,13 @@ section {
     background-size: cover;
     padding: 80px 0 60px 0;
 }
+
 #services .box {
     padding: 50px 20px;
     margin-bottom: 50px;
     text-align: center;
     border: 1px solid #e6e6e6;
-    height: 200px;
+    height: 15rem;
     position: relative;
     background: #fafafa;
 }
@@ -627,7 +646,7 @@ section {
 }
 #services .icon i {
     color: #fff;
-    font-size: 24px;
+    font-size: 36px;
     line-height: 0;
 }
 #services .box:hover .icon {
@@ -658,10 +677,11 @@ section {
 --------------------------------*/
 #call-to-action {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url(../img/call-to-action-bg.jpg) fixed center center;
+        url(../img/planning.jpg) fixed center center;
     background-size: cover;
     padding: 80px 0;
 }
+
 @media (max-width: 1024px) {
     #call-to-action {
         background-attachment: scroll;
@@ -683,7 +703,7 @@ section {
     }
 }
 #call-to-action .cta-btn {
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
     text-transform: uppercase;
     font-weight: 500;
     font-size: 16px;

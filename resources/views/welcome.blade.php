@@ -34,14 +34,31 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-    @if(App::getLocale() == 'ar')
-    <style>
-        body{
-            direction: rtl;
-        }
-    </style>
-    @endif
-<body >
+<style>
+  #carouselExampleCaptions {
+    height: 200px;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+  }
+
+</style>
+@if (App::getLocale() == 'ar')
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300&display=swap');
+
+    body {
+      direction: rtl;
+      font-family: 'Almarai', sans-serif !important;
+      font-weight: 600 !important;
+    }
+
+  </style>
+@endif
+
+<body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
@@ -63,7 +80,7 @@
           <li class="dropdown"><a href="#">
 
               <span>
-                  <span>{{ __('English') }}</span>
+                <span>{{ __('English') }}</span>
 
                 @if (App::getLocale() == 'ar')
                   <span>
@@ -157,14 +174,19 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
+
   <section id="hero">
-    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1></h1>
-      <h2>{{ __('Loreml sdafjlsad l;aksdjf as;dlk f') }}</h2>
-      <a href="#" class="btn-get-started">{{ __('Request Your Projectt') }}</a>
-      {{ LaravelLocalization::getCurrentLocaleDirection() }}
-      {{ App::getLocale() }}
-    </div>
+    <div id="hero" class="carousel slide" data-bs-ride="carousel">
+
+      <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+        <h1>{{ __('Space Tech Co.') }}</h1>
+        <h2>{{ __('SOFTWARE CONSULTING AND DEVELOPMENT
+                                                                                                                                                          FOR YOUR DIGITAL SUCCESS') }}</h2>
+        <a href="#" class="btn-get-started">{{ __('get in touch') }}</a>
+        {{-- {{ LaravelLocalization::getCurrentLocaleDirection() }}
+        {{ App::getLocale() }} --}}
+      </div>
+
   </section><!-- End Hero Section -->
 
   <main id="main">
@@ -174,28 +196,105 @@
       <div class="container" data-aos="fade-up">
         <div class="row about-container">
 
-          <div class="col-lg-6 content order-lg-1 order-2">
-            <h2 class="title">Few Words About Us</h2>
-            <p>
-              SpaceTech is a startup
-            </p>
+          <div class="col-lg-6 content order-lg-1 order-2 text-center">
+            <h2 class="title">{{ __('WHO WE ARE') }}</h2>
+            <span>
+              &nbsp;&nbsp;
+              {{ __('We are a digital development StartUp that provides cutom software development and IT serrvices.') }}
+            </span>
+            <p class="mt-2">&nbsp;&nbsp;{{ __('Our developers build custom software for individuals, startups, and small to medium business.') }}</p>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <div class="icon"><i class="bi bi-briefcase"></i></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+              <div class="icon">
+                <svg style="width: 3rem" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 85 84" viewBox="0 0 85 84" class="offer-image replaced-svg">
+                  <g fill="none">
+                    <g stroke="#505050">
+                      <path d="m49.2 67.2-4.7 4.6 4.7 4.7"></path>
+                      <path d="m44.5 71.8h26.3c2.6 0 4.6-2.1 4.6-4.7v-27.9"></path>
+                      <path d="m36.8 14.4 4.7-4.6-4.7-4.7"></path>
+                      <path d="m41.5 9.8h-26.3c-2.6 0-4.6 2.1-4.6 4.7v27.9"></path>
+                    </g>
+                    <path d="m19.8 61h46.4v-40.4h-46.4z" stroke="#1476f2"></path>
+                    <path d="m24.5 25.3h3.1m1.5 0h3.1m-12.4 4.6h46.4" stroke="#1476f2"></path>
+                    <path d="m26 54.8h15.5v-18.7h-15.5z" stroke="#505050"></path>
+                    <path d="m46.1 36.1h15.5m-15.5 6.3h15.5m-15.5 6.2h9.3m20.1-12.5v-3.1m0-3.1v-3.1m-65 28v-3.1m0-3.1v-3.1" stroke="#505050"></path>
+                  </g>
+                </svg>
+
+              </div>
+              <h4 class="title"><a href="">{{ __('Web Platform') }}</a></h4>
+              <ul class="skills">
+                <li>{{ __('Laravel') }}</li>
+                <li>{{ __('Vue.js') }}</li>
+                <li>{{ __('React.js') }}</li>
+                <li>{{ __('NodeJs') }}</li>
+                <li>{{ __('ASP.NET Core') }}</li>
+              </ul>
+              {{-- <p class="description">{{ __('We deliver comprehensive web development services with clear results and a clear development process.') }}</p> --}}
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <div class="icon"><i class="bi bi-card-checklist"></i></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <div class="icon">
+                {{-- <i class="bi bi-card-checklist"></i> --}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="54" viewBox="0 0 85 71" class="offer-image replaced-svg">
+                  <defs>
+                    <filter id="a" width="104.3%" height="113.3%" x="-2.1%" y="-5.8%" filterUnits="objectBoundingBox">
+                      <feOffset dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+                      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="7.5"></feGaussianBlur>
+                      <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.03 0"></feColorMatrix>
+                      <feMerge>
+                        <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                        <feMergeNode in="SourceGraphic"></feMergeNode>
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <g fill="none" fill-rule="evenodd" filter="url(#a)" transform="translate(-754 -39)">
+                    <path stroke="#494946"
+                      d="M798.174 74.455v7.09a2.355 2.355 0 0 0 2.348 2.364h16.435a2.355 2.355 0 0 0 2.347-2.364v-20.09a2.355 2.355 0 0 0-2.347-2.364h-16.435a2.355 2.355 0 0 0-2.348 2.364v5.909m3.522 16.545V91h14.087v-7.09m0-24.82V52h-14.087v7.09">
+                    </path>
+                    <path stroke="#494946" d="M808.74 70.91h-28.175m3.522 3.545l-3.522-3.546 3.522-3.545m21.13 7.09l3.522-3.545-3.522-3.545m16.435 0h1.174c.648 0 1.174.53 1.174 1.181v4.728c0 .652-.526 1.182-1.174 1.182h-1.174"></path>
+                    <path stroke="#1476F2" stroke-linejoin="round" d="M770 83.91h22.304m0-26H770m9.391 29.545h3.522"></path>
+                    <path stroke="#1476F2" d="M792.304 74.455v14.181A2.355 2.355 0 0 1 789.957 91h-17.61A2.355 2.355 0 0 1 770 88.636V54.364A2.355 2.355 0 0 1 772.348 52h17.609a2.355 2.355 0 0 1 2.347 2.364v13"></path>
+                  </g>
+                </svg>
+              </div>
+              <h4 class="title"><a href="">{{ __('Mobile Development') }}</a></h4>
+              <ul class="skills">
+                <li>{{ __('IOS') }}</li>
+                <li>{{ __('Android') }}</li>
+                <li>{{ __('Flutter') }}</li>
+                <li>{{ __('ReactNative') }}</li>
+              </ul>
+              {{-- <p class="description">{{ __('Create an impactful mobile app that fits your brand and industry within a shorter time frame.') }}</p> --}}
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-              <div class="icon"><i class="bi bi-binoculars"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#42C2FF">
+                  <path d="M0 0h24v24H0V0z" fill="none" />
+                  <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+                </svg>
+                {{-- <svg class="primary" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#42C2FF">
+                  <g>
+                    <rect fill="none" height="24" width="24" />
+                    <path
+                      d="M17,2H7C5.9,2,5,2.9,5,4v2c0,1.1,0.9,2,2,2h10c1.1,0,2-0.9,2-2V4C19,2.9,18.1,2,17,2z M17,6H7V4h10V6z M20,22H4 c-1.1,0-2-0.9-2-2v-1h20v1C22,21.1,21.1,22,20,22z M18.53,10.19C18.21,9.47,17.49,9,16.7,9H7.3c-0.79,0-1.51,0.47-1.83,1.19L2,18 h20L18.53,10.19z M9.5,16h-1C8.22,16,8,15.78,8,15.5C8,15.22,8.22,15,8.5,15h1c0.28,0,0.5,0.22,0.5,0.5C10,15.78,9.78,16,9.5,16z M9.5,14h-1C8.22,14,8,13.78,8,13.5C8,13.22,8.22,13,8.5,13h1c0.28,0,0.5,0.22,0.5,0.5C10,13.78,9.78,14,9.5,14z M9.5,12h-1 C8.22,12,8,11.78,8,11.5C8,11.22,8.22,11,8.5,11h1c0.28,0,0.5,0.22,0.5,0.5C10,11.78,9.78,12,9.5,12z M12.5,16h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C13,15.78,12.78,16,12.5,16z M12.5,14h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C13,13.78,12.78,14,12.5,14z M12.5,12h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C13,11.78,12.78,12,12.5,12z M15.5,16h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C16,15.78,15.78,16,15.5,16z M15.5,14h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C16,13.78,15.78,14,15.5,14z M15.5,12h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C16,11.78,15.78,12,15.5,12z" />
+                  </g>
+                </svg> --}}
+              </div>
+              <h4 class="title"><a href="#">{{ __('Programming Languages') }}</a></h4>
+              <ul class="skills">
+                <li>{{ __('PHP') }}</li>
+                <li>{{ __('C#') }}</li>
+                <li>{{ __('HTML, Css, JS') }}</li>
+                <li>{{ __('Swift') }}</li>
+                <li>{{ __('Java') }}</li>
+                <li>{{ __('Kotlin') }}</li>
+              </ul>
+              {{-- <h4 class="title"><a href="">{{ __('POS') }}</a></h4> --}}
+
+              {{-- <p class="description">{{ __('Easy to use, modern and reliable POS solution.
+Accompanied by the top of the line hardware , witch touch screens and smart application') }}</p> --}}
             </div>
 
           </div>
@@ -207,7 +306,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Facts Section ======= -->
-    <section id="facts">
+    {{-- <section id="facts">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h3 class="section-title">Facts</h3>
@@ -238,59 +337,72 @@
         </div>
 
       </div>
-    </section><!-- End Facts Section -->
+    </section> --}}
+    <!-- End Facts Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h3 class="section-title">Services</h3>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <h3 class="section-title">{{ __('We Provide Agile Software Development Services') }}</h3>
+          <p class="section-description">
+            {{ _('Based on many years of experience, we know that every business has a different software and hardware environment. That is why we provide a wide range of software development services. Check out the key services below.') }}</p>
         </div>
         <div class="row">
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="col-lg-6" data-aos="zoom-in">
             <div class="box">
               <div class="icon"><a href=""><i class="bi bi-briefcase"></i></a></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <h4 class="title"><a href="">{{ __('Custom software development') }}</a></h4>
+              <p class="description">
+                {{ __('We convert your idea into solid, safe, and reliable custom software with our full-cycle software development services, including:') }}
+              </p>
+              <ul class="skills">
+                <li>{{ __('Web app solution') }}</li>
+                <li>{{ __('Mobile app solutions') }}</li>
+                <li>{{ __('UI/UX') }}</li>
+              </ul>
+
             </div>
           </div>
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="col-lg-6" data-aos="zoom-in">
             <div class="box">
-              <div class="icon"><a href=""><i class="bi bi-card-checklist"></i></a></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <div class="icon"><a href="">
+                  <i class='bx bx-mobile-alt'></i> </a></div>
+              <h4 class="title"><a href="">{{ __('Mobile App Development Services') }}</a></h4>
+              <p class="description">{{ __('Our team can provide support at any stage of custom mobile app development, from creating a proof-of-concept app to an MVP:') }}</p>
+              <ul class="skills">
+                <li>{{ __('Cross-platform apps for iOS and Android') }}</li>
+                <li>{{ __('Hybrid and mobile web') }}</li>
+                <li>{{ __('Native apps development') }}</li>
+              </ul>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="col-lg-6" data-aos="zoom-in" onmouseover="document.getElementById('overme').setAttribut('fill', '#42c2ff')">
             <div class="box">
-              <div class="icon"><a href=""><i class="bi bi-bar-chart"></i></a></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <div class="icon"><a href="">
+                  <svg id="overme" class="primary" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="white">
+                    <g>
+                      <rect fill="none" height="24" width="24" />
+                      <path
+                        d="M17,2H7C5.9,2,5,2.9,5,4v2c0,1.1,0.9,2,2,2h10c1.1,0,2-0.9,2-2V4C19,2.9,18.1,2,17,2z M17,6H7V4h10V6z M20,22H4 c-1.1,0-2-0.9-2-2v-1h20v1C22,21.1,21.1,22,20,22z M18.53,10.19C18.21,9.47,17.49,9,16.7,9H7.3c-0.79,0-1.51,0.47-1.83,1.19L2,18 h20L18.53,10.19z M9.5,16h-1C8.22,16,8,15.78,8,15.5C8,15.22,8.22,15,8.5,15h1c0.28,0,0.5,0.22,0.5,0.5C10,15.78,9.78,16,9.5,16z M9.5,14h-1C8.22,14,8,13.78,8,13.5C8,13.22,8.22,13,8.5,13h1c0.28,0,0.5,0.22,0.5,0.5C10,13.78,9.78,14,9.5,14z M9.5,12h-1 C8.22,12,8,11.78,8,11.5C8,11.22,8.22,11,8.5,11h1c0.28,0,0.5,0.22,0.5,0.5C10,11.78,9.78,12,9.5,12z M12.5,16h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C13,15.78,12.78,16,12.5,16z M12.5,14h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C13,13.78,12.78,14,12.5,14z M12.5,12h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C13,11.78,12.78,12,12.5,12z M15.5,16h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C16,15.78,15.78,16,15.5,16z M15.5,14h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C16,13.78,15.78,14,15.5,14z M15.5,12h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C16,11.78,15.78,12,15.5,12z" />
+                    </g>
+                  </svg>
+                </a></div>
+              <h4 class="title"><a href="">{{ __('POS') }}</a></h4>
+              <p class="description">{{ __('Easy to use, modern and reliable POS solution.
+              Accompanied by the top of the line hardware , witch touch screens and smart application') }}</p>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+          <div class="col-lg-6" data-aos="zoom-in">
             <div class="box">
-              <div class="icon"><a href=""><i class="bi bi-binoculars"></i></a></div>
-              <h4 class="title"><a href="">Magni Dolores</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <div class="icon"><a href=""><i class='bx bx-news'></i></i></a></div>
+              <h4 class="title"><a href="">{{ __('UI / UX Design') }}</a></h4>
+              <p class="description">{{ __('Build the product you need on time with an experienced team that uses a clear and effective design process.') }}</p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-            <div class="box">
-              <div class="icon"><a href=""><i class="bi bi-brightness-high"></i></a></div>
-              <h4 class="title"><a href="">Nemo Enim</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6" data-aos="zoom-in">
-            <div class="box">
-              <div class="icon"><a href=""><i class="bi bi-calendar4-week"></i></a></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-          </div>
+
+
         </div>
 
       </div>
@@ -301,12 +413,11 @@
       <div class="container">
         <div class="row" data-aos="zoom-in">
           <div class="col-lg-9 text-center text-lg-start">
-            <h3 class="cta-title">Call To Action</h3>
-            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-              laborum.</p>
+            <h3 class="cta-title">{{ __('Want To Develop A Custom Software Solution?') }}</h3>
+
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+            <a class="cta-btn align-middle" href="#">{{ __('Contact Us') }}</a>
           </div>
         </div>
 
