@@ -181,7 +181,7 @@
       <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
         <h1>{{ __('Space Tech Co.') }}</h1>
         <h2>{{ __('SOFTWARE CONSULTING AND DEVELOPMENT
-                                                                                                                                                          FOR YOUR DIGITAL SUCCESS') }}</h2>
+                                                                                                                                                                  FOR YOUR DIGITAL SUCCESS') }}</h2>
         <a href="#" class="btn-get-started">{{ __('get in touch') }}</a>
         {{-- {{ LaravelLocalization::getCurrentLocaleDirection() }}
         {{ App::getLocale() }} --}}
@@ -390,7 +390,7 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
                 </a></div>
               <h4 class="title"><a href="">{{ __('POS') }}</a></h4>
               <p class="description">{{ __('Easy to use, modern and reliable POS solution.
-              Accompanied by the top of the line hardware , witch touch screens and smart application') }}</p>
+                            Accompanied by the top of the line hardware , witch touch screens and smart application') }}</p>
             </div>
           </div>
 
@@ -544,20 +544,20 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
     <section id="team">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h3 class="section-title">Team</h3>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <h3 class="section-title">{{ __('Our Team') }}</h3>
+          <p class="section-description">{{ __('We aim for innovation not only in our development organization but also in the way we approach every aspect of our business.') }}</p>
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="pic"><img src="{{ asset('Regna/assets/img/team-1.jpg') }}" alt=""></div>
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
+              <div class="pic"><img src="{{ asset('Regna/assets/img/MyProfile.jfif') }}" alt=""></div>
+              <h4>Yahya K Iyaseh</h4>
+              <span>CEO, Co-Founder</span>
               <div class="social">
-                <a href=""><i class="bi bi-twitter"></i></a>
-                <a href=""><i class="bi bi-facebook"></i></a>
-                <a href=""><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-linkedin"></i></a>
+                <a target="_blank" href="https://wa.me/+972594367643"><i class="bi bi-whatsapp"></i></a>
+                <a target="_blank" href="https://www.facebook.com/iyasehy/"><i class="bi bi-facebook"></i></a>
+                <a target="_blank" href="https://www.instagram.com/yahya_iyaseh/"><i class="bi bi-instagram"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/yahya-iyaseh-6181a8220/"><i class="bi bi-linkedin"></i></a>
               </div>
             </div>
           </div>
@@ -612,15 +612,15 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
     <section id="contact">
       <div class="container">
         <div class="section-header">
-          <h3 class="section-title">Contact</h3>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <h3 class="section-title">{{ __('Contact With Us') }}</h3>
+          <p class="section-description">{{ __('Contact us to inquire about anything') }}; <i class='bx bx-happy-alt'></i></p>
         </div>
       </div>
 
       <!-- Uncomment below if you wan to use dynamic maps -->
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452"
-        width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1700.7679348312577!2d35.07451886618047!3d31.50943899808853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf0e427a55310e246!2zMzHCsDMwJzM0LjAiTiAzNcKwMDQnMzAuOCJF!5e0!3m2!1sen!2s!4v1647801710732!5m2!1sen!2s"
+        width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
       <div class="container mt-5">
         <div class="row justify-content-center">
@@ -630,7 +630,7 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
             <div class="info">
               <div>
                 <i class="bi bi-geo-alt"></i>
-                <p>A108 Adam Street<br>New York, NY 535022</p>
+                <p>Al-houzee Al-Thany, Hebrorn - WestBank, Palestine </p>
               </div>
 
               <div>
@@ -640,7 +640,7 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
 
               <div>
                 <i class="bi bi-phone"></i>
-                <p>+1 5589 55488 55s</p>
+                <p>+972594367643</p>
               </div>
             </div>
 
