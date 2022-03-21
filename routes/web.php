@@ -27,7 +27,7 @@ Route::get('/message', function () {
     return 'done';
 });
 Route::post('/message/create', [MessageController::class, 'create'])->middleware(['guest'])->name('create.user.message');
-
+Route::get('/project/{slug?}', [MessageController::class, 'project'])->name('show.project');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });

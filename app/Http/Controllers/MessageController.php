@@ -19,4 +19,11 @@ class MessageController extends Controller
         Message::create($data);
         return redirect()->back()->withSuccess('ok');
     }
+
+
+    public function project($slug = null){
+        return view('project', [
+            'project' => $slug,
+        ]);
+    }
 }
