@@ -654,6 +654,7 @@ section {
 }
 #services .box:hover .icon {
     background: #fff;
+    color: var(--main-color);
     border: 2px solid var(--main-color);
 }
 #services .box:hover .icon i {
