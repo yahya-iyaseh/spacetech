@@ -81,7 +81,8 @@ h6 {
 --------------------------------------------------------------*/
 
 .skills {
-    list-style:none
+    list-style:none;
+    direction: ltr;
 }
 
 .skills li{
@@ -538,7 +539,7 @@ section {
     color: #333;
     font-weight: 700;
     font-size: 32px;
-    text-align: left;
+    /* text-align: left; */
 }
 @media (max-width: 768px) {
     #about .about-container .title {

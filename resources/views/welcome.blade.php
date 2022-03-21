@@ -180,9 +180,8 @@
 
       <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
         <h1>{{ __('Space Tech Co.') }}</h1>
-        <h2>{{ __('SOFTWARE CONSULTING AND DEVELOPMENT
-                                                                                                                                                                  FOR YOUR DIGITAL SUCCESS') }}</h2>
-        <a href="#" class="btn-get-started">{{ __('get in touch') }}</a>
+        <h2>{{ __('SOFTWARE CONSULTING AND DEVELOPMENT FOR YOUR DIGITAL SUCCESS') }}</h2>
+        <a href="#contact" class="btn-get-started">{{ __('get in touch') }}</a>
         {{-- {{ LaravelLocalization::getCurrentLocaleDirection() }}
         {{ App::getLocale() }} --}}
       </div>
@@ -197,10 +196,10 @@
         <div class="row about-container">
 
           <div class="col-lg-6 content order-lg-1 order-2 text-center">
-            <h2 class="title">{{ __('WHO WE ARE') }}</h2>
+            <h2 class="title mx-3">{{ __('WHO WE ARE') }}</h2>
             <span>
               &nbsp;&nbsp;
-              {{ __('We are a digital development StartUp that provides cutom software development and IT serrvices.') }}
+              {{ __('We are a digital development StartUp that provides custom software development and IT services.') }}
             </span>
             <p class="mt-2">&nbsp;&nbsp;{{ __('Our developers build custom software for individuals, startups, and small to medium business.') }}</p>
 
@@ -346,7 +345,7 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
         <div class="section-header">
           <h3 class="section-title">{{ __('We Provide Agile Software Development Services') }}</h3>
           <p class="section-description">
-            {{ _('Based on many years of experience, we know that every business has a different software and hardware environment. That is why we provide a wide range of software development services. Check out the key services below.') }}</p>
+            {{ __('Based on many years of experience, we know that every business has a different software and hardware environment. That is why we provide a wide range of software development services. Check out the key services below.') }}</p>
         </div>
         <div class="row">
           <div class="col-lg-6" data-aos="zoom-in">
@@ -389,8 +388,7 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
                   </svg>
                 </a></div>
               <h4 class="title"><a href="">{{ __('POS') }}</a></h4>
-              <p class="description">{{ __('Easy to use, modern and reliable POS solution.
-                            Accompanied by the top of the line hardware , witch touch screens and smart application') }}</p>
+              <p class="description">{{ __('Easy to use, modern and reliable POS solution. Accompanied by the top of the line hardware , witch touch screens and smart application') }}</p>
             </div>
           </div>
 
@@ -551,8 +549,8 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
           <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="pic"><img src="{{ asset('Regna/assets/img/MyProfile.jfif') }}" alt=""></div>
-              <h4>Yahya K Iyaseh</h4>
-              <span>CEO, Co-Founder</span>
+              <h4>{{ __('Yahya K Iyaseh') }}</h4>
+              <span>{{ _('CEO, Co-Founder') }}</span>
               <div class="social">
                 <a target="_blank" href="https://wa.me/+972594367643"><i class="bi bi-whatsapp"></i></a>
                 <a target="_blank" href="https://www.facebook.com/iyasehy/"><i class="bi bi-facebook"></i></a>
@@ -630,17 +628,17 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
             <div class="info">
               <div>
                 <i class="bi bi-geo-alt"></i>
-                <p>Al-houzee Al-Thany, Hebrorn - WestBank, Palestine </p>
+                <p>{{ __('Al-houzee Al-Thany, Hebrorn - WestBank, Palestine') }}</p>
               </div>
 
               <div>
                 <i class="bi bi-envelope"></i>
-                <p>info@example.com</p>
+                <p>{{ __('info@example.com') }}</p>
               </div>
 
               <div>
                 <i class="bi bi-phone"></i>
-                <p>+972594367643</p>
+                <p>{{ __('00972594367643') }}</p>
               </div>
             </div>
 
@@ -656,12 +654,16 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
 
           <div class="col-lg-5 col-md-8">
             <div class="form">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form action="{{ route('create.user.message') }}" method="post" role="form" class="php-email-form">
+                @csrf
                 <div class="form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="form-group mt-3">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" name="phone" class="form-control" id="phone" placeholder="Your Phone">
                 </div>
                 <div class="form-group mt-3">
                   <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
@@ -671,10 +673,16 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
                 </div>
                 <div class="my-3">
                   <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="error-message">
+                    @if ($errors->any())
+                      @foreach ($errors->all() as $error)
+                        <span class="d-block invalid-feedback">{{ $error }}</span>
+                      @endforeach
+                    @endif
+                  </div>
+                  {{-- <div class="sent-message">Your message has been sent. Thank you!</div> --}}
                 </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
+                <div class="text-center"><button type="submit">{{ __('Send Message') }}</button></div>
               </form>
             </div>
           </div>
@@ -696,16 +704,9 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>Regna</strong>. All Rights Reserved
+        &copy; @lang('Copyright') <strong>{{ __('Space Tech') }}</strong>. {{ __("All Rights Reserved") }}
       </div>
       <div class="credits">
-        <!--
-        All the links in the footer should remain intact.
-        You can delete the links only if you purchased the pro version.
-        Licensing information: https://bootstrapmade.com/license/
-        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Regna
-      -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -719,7 +720,7 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
   <script src="{{ asset('Regna/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
   <script src="{{ asset('Regna/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
   <script src="{{ asset('Regna/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
-  <script src="{{ asset('Regna/assets/vendor/php-email-form/validate.js') }}"></script>
+  {{-- <script src="{{ asset('Regna/assets/vendor/php-email-form/validate.js') }}"></script> --}}
 
   <!-- Template Main JS File -->
   <script src="{{ asset('Regna/assets/js/main.js') }}"></script>

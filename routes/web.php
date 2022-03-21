@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -21,9 +22,11 @@ Route::get('/', function () {
     //     return view('welcome2');
     // }
     return view('welcome');
-
 });
-
+Route::get('/message', function () {
+    return 'done';
+});
+Route::post('/message/create', [MessageController::class, 'create'])->middleware(['guest'])->name('create.user.message');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
