@@ -179,7 +179,7 @@
     <div id="hero" class="carousel slide" data-bs-ride="carousel">
 
       <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-        <h1>{{ __('Space Tech Co.') }}</h1>
+        <h1>{{ __('Space Tech') }}</h1>
         <h2>{{ __('SOFTWARE CONSULTING AND DEVELOPMENT FOR YOUR DIGITAL SUCCESS') }}</h2>
         <a href="#contact" class="btn-get-started">{{ __('get in touch') }}</a>
         {{-- {{ LaravelLocalization::getCurrentLocaleDirection() }}
@@ -356,7 +356,7 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
                 {{ __('We convert your idea into solid, safe, and reliable custom software with our full-cycle software development services, including:') }}
               </p>
               <ul class="skills">
-                <li>{{ __('Web app solution') }}</li>
+                <li>{{ __('Web app solutions') }}</li>
                 <li>{{ __('Mobile app solutions') }}</li>
                 <li>{{ __('UI/UX') }}</li>
               </ul>
@@ -379,13 +379,15 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
           <div class="col-lg-6" data-aos="zoom-in" onmouseover="document.getElementById('overme').setAttribut('fill', '#42c2ff')">
             <div class="box">
               <div class="icon"><a href="">
-                  <svg id="overme" class="primary" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="white">
+                  {{-- <svg id="overme" class="primary" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="white">
                     <g>
                       <rect fill="none" height="24" width="24" />
                       <path
                         d="M17,2H7C5.9,2,5,2.9,5,4v2c0,1.1,0.9,2,2,2h10c1.1,0,2-0.9,2-2V4C19,2.9,18.1,2,17,2z M17,6H7V4h10V6z M20,22H4 c-1.1,0-2-0.9-2-2v-1h20v1C22,21.1,21.1,22,20,22z M18.53,10.19C18.21,9.47,17.49,9,16.7,9H7.3c-0.79,0-1.51,0.47-1.83,1.19L2,18 h20L18.53,10.19z M9.5,16h-1C8.22,16,8,15.78,8,15.5C8,15.22,8.22,15,8.5,15h1c0.28,0,0.5,0.22,0.5,0.5C10,15.78,9.78,16,9.5,16z M9.5,14h-1C8.22,14,8,13.78,8,13.5C8,13.22,8.22,13,8.5,13h1c0.28,0,0.5,0.22,0.5,0.5C10,13.78,9.78,14,9.5,14z M9.5,12h-1 C8.22,12,8,11.78,8,11.5C8,11.22,8.22,11,8.5,11h1c0.28,0,0.5,0.22,0.5,0.5C10,11.78,9.78,12,9.5,12z M12.5,16h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C13,15.78,12.78,16,12.5,16z M12.5,14h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C13,13.78,12.78,14,12.5,14z M12.5,12h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C13,11.78,12.78,12,12.5,12z M15.5,16h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C16,15.78,15.78,16,15.5,16z M15.5,14h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C16,13.78,15.78,14,15.5,14z M15.5,12h-1 c-0.28,0-0.5-0.22-0.5-0.5c0-0.28,0.22-0.5,0.5-0.5h1c0.28,0,0.5,0.22,0.5,0.5C16,11.78,15.78,12,15.5,12z" />
                     </g>
-                  </svg>
+                  </svg> --}}
+                  <i class='bx bxs-news'></i>
+                  {{-- <i class='bx bxs-offer' ></i> --}}
                 </a></div>
               <h4 class="title"><a href="">{{ __('POS') }}</a></h4>
               <p class="description">{{ __('Easy to use, modern and reliable POS solution. Accompanied by the top of the line hardware , witch touch screens and smart application') }}</p>
@@ -415,7 +417,7 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
 
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">{{ __('Contact Us') }}</a>
+            <a class="cta-btn align-middle" href="#contact">{{ __('Contact Us') }}</a>
           </div>
         </div>
 
@@ -550,7 +552,7 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
             <div class="member" data-aos="fade-up" data-aos-delay="100">
               <div class="pic"><img src="{{ asset('Regna/assets/img/MyProfile.jfif') }}" alt=""></div>
               <h4>{{ __('Yahya K Iyaseh') }}</h4>
-              <span>{{ _('CEO, Co-Founder') }}</span>
+              <span>{{ __('CEO, Co-Founder') }}</span>
               <div class="social">
                 <a target="_blank" href="https://wa.me/+972594367643"><i class="bi bi-whatsapp"></i></a>
                 <a target="_blank" href="https://www.facebook.com/iyasehy/"><i class="bi bi-facebook"></i></a>
@@ -611,7 +613,7 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
       <div class="container">
         <div class="section-header">
           <h3 class="section-title">{{ __('Contact With Us') }}</h3>
-          <p class="section-description">{{ __('Contact us to inquire about anything') }}; <i class='bx bx-happy-alt'></i></p>
+          <p class="section-description">{{ __('Contact us to inquire about anything') }}<i class='bx bx-happy-alt'></i></p>
         </div>
       </div>
 
@@ -642,13 +644,13 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
               </div>
             </div>
 
-            <div class="social-links">
+            {{-- <div class="social-links">
               <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
               <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
               <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
               <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
               <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            </div>
+            </div> --}}
 
           </div>
 
@@ -657,19 +659,19 @@ Accompanied by the top of the line hardware , witch touch screens and smart appl
               <form action="{{ route('create.user.message') }}" method="post" role="form" class="php-email-form">
                 @csrf
                 <div class="form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="{{ __('Your Name') }}" required>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="{{ __('Your Email') }}" required>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="text" name="phone" class="form-control" id="phone" placeholder="Your Phone">
+                  <input type="text" name="phone" class="form-control" id="phone" placeholder="{{ __('Your Phone') }}">
                 </div>
                 <div class="form-group mt-3">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="{{ __('Subject') }}" required>
                 </div>
                 <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                  <textarea class="form-control" name="message" rows="5" placeholder="{{ _('Message') }}" required></textarea>
                 </div>
                 <div class="my-3">
                   <div class="loading">Loading</div>
