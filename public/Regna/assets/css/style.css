@@ -476,9 +476,9 @@ section {
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
-    padding: 20px 0;
-    background-color: whitesmoke;
-    min-height: 40px;
+    /* padding: 20px 0; */
+    /* background-color: whitesmoke; */
+    /* min-height: 40px; */
     margin-top: 92px;
 }
 .breadcrumbs h2 {
@@ -778,6 +778,7 @@ section {
     transition: all ease-in-out 0.3s;
     background: var(--main-color);
     padding: 15px 20px;
+    direction: ltr;
 }
 #portfolio .portfolio-item .portfolio-info h4 {
     font-size: 18px;

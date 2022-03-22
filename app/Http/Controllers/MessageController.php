@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Message;
+use App\Project;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller
@@ -21,9 +22,10 @@ class MessageController extends Controller
     }
 
 
-    public function project($slug = null){
+    public function project($id = null){
+        $project = Project::find($id);
         return view('project', [
-            'project' => $slug,
+            'project' => $project,
         ]);
     }
 }

@@ -6,5 +6,5 @@
   <x-hero />
   <!-- End Hero Section -->
   {{-- Main Body --}}
-  <x-body />
+  <x-body :projects="$projects"/>
   <x-footer />

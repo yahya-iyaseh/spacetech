@@ -1,7 +1,7 @@
 <x-head>
   <style>
     #header {
-      background-color: rgba(0, 0, 0, 0.596) !important;
+      background-color: rgba(136, 149, 155, 0.733) !important;
     }
 
   </style>
@@ -13,7 +13,7 @@
   <!-- End Header -->
 
 
-  <x-bodyProject />
+  <x-bodyProject :project="$project"/>
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->
