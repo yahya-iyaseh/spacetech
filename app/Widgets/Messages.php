@@ -2,12 +2,13 @@
 
 namespace App\Widgets;
 
-use Arrilot\Widgets\AbstractWidget;
+use App\Message;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
+use TCG\Voyager\Widgets\BaseDimmer;
 
-class Messages extends AbstractWidget
+class Messages extends BaseDimmer
 {
     /**
      * The configuration array.
@@ -22,18 +23,18 @@ class Messages extends AbstractWidget
      */
     public function run()
     {
-        $count = App\Message::count();
+        $count = Message::count();
         $string = trans_choice('Messages', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-message',
+            'icon'   => 'voyager-news',
             'title'  => "{$count} {$string}",
-            'text'   => __('voyager::dimmer.page_text', ['count' => $count, 'string' => Str::lower($string)]),
+            'text'   => __('You have :count in your database. Click below to view all messages.', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
-                'text' => __('voyager::dimmer.page_link_text'),
-                'link' => route('voyager.pages.index'),
+                'text' => __('View all Messages'),
+                'link' => route('voyager.messages.index'),
             ],
-            'image' => voyager_asset('images/widget-backgrounds/03.jpg'),
+            'image' => voyager_asset('images/widget-backgrounds/01.jpg'),
         ]));
     }
 
@@ -44,6 +45,6 @@ class Messages extends AbstractWidget
      */
     public function shouldBeDisplayed()
     {
-        return Auth::user()->can('browse', Voyager::model('Page'));
+        return Auth::user()->can('browse', Voyager::model('User'));
     }
 }

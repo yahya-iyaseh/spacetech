@@ -1,4 +1,4 @@
-@props(['projects'])
+@props(['projects', 'employees'])
 <main id="main">
 
   <!-- ======= About Section ======= -->
@@ -22,7 +22,7 @@
   <!-- End Projects Section -->
 
   <!-- ======= Team Section ======= -->
-  <x-body.team />
+  <x-body.team :employees="$employees"/>
   <!-- End Team Section -->
 
   <!-- ======= Contact Section ======= -->

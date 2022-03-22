@@ -48,6 +48,7 @@
             <div class="form">
               <form action="{{ route('create.user.message') }}" method="post" role="form" class="php-email-form">
                 @csrf
+                @method('POST')
                 <div class="form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="{{ __('Your Name') }}" required>
                 </div>

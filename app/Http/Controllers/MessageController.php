@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 class MessageController extends Controller
 {
     public function create(Request $request){
+       
         $data = $request->validate([
             'name' => ['required', 'string', 'max:250'],
             'email' => ['required', 'email', 'max:250'],
@@ -18,7 +19,7 @@ class MessageController extends Controller
         ]);
 
         Message::create($data);
-        return redirect()->back()->withSuccess('ok');
+        return redirect()->back();
     }
 
 

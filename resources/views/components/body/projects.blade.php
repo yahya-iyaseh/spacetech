@@ -56,7 +56,7 @@
                  {{ $project->category->name }}
                @endif
              </p>
-             
+
              @foreach (json_decode($project->images) as $image)
                @continue($loop->first)
                <a href="{{ Voyager::image($image) }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="{{ App::getLocale() == 'ar' ? $project->ar_title : $project->title }}"><i class="bx bx-plus"></i></a>
