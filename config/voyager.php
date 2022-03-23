@@ -145,6 +145,8 @@ return [
 
         'widgets' => [
             'App\Widgets\Messages',
+            'App\Widgets\Projects',
+            'App\Widgets\Employees',
         ],
 
     ],

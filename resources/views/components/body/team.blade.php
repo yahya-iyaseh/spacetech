@@ -14,7 +14,7 @@
              <span>{{ $employee->job }}</span>
              <div class="social">
 
-               @foreach ($employee->links as $link)
+               @foreach ($employee->links()->orderBy('icon')->get() as $link)
                  <a target="_blank" href="{{ $link->url }}"><i class="bi bi-{{ $link->icon }}"></i></a>
                @endforeach
              </div>
@@ -22,13 +22,13 @@
          </div>
        @endforeach
 
-       <div class="col-lg-3 col-md-6">
+       {{-- <div class="col-lg-3 col-md-6">
          <div class="member" data-aos="fade-up" data-aos-delay="200">
            <div class="pic"><img src="{{ asset('Regna/assets/img/team-2.jpg') }}" alt=""></div>
            <h4>Sarah Jhinson</h4>
            <span>Product Manager</span>
            <div class="social">
-             <a href=""><i class="bi bi-twitter"></i></a>
+             <a href=""><i class="bi bi-github"></i></a>
              <a href=""><i class="bi bi-facebook"></i></a>
              <a href=""><i class="bi bi-instagram"></i></a>
              <a href=""><i class="bi bi-linkedin"></i></a>
@@ -62,7 +62,7 @@
              <a href=""><i class="bi bi-linkedin"></i></a>
            </div>
          </div>
-       </div>
+       </div> --}}
      </div>
 
    </div>

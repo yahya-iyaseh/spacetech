@@ -8,11 +8,11 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a class="nav-link scrollto active" href="{{ url('/') }}#hero">{{ __('Home') }}</a></li>
-        <li><a class="nav-link scrollto" href="{{ url('/') }}#about">{{ __('About') }}</a></li>
-        <li><a class="nav-link scrollto" href="{{ url('/') }}#services">{{ __('Services') }}</a></li>
-        <li><a class="nav-link scrollto " href="{{ url('/') }}#portfolio">{{ __('Portfolio') }}</a></li>
-        <li><a class="nav-link scrollto" href="{{ url('/') }}#team">{{ __('Team') }}</a></li>
+        <li><a class="nav-link scrollto active" href="{{ route('home') }}/#hero">{{ __('Home') }}</a></li>
+        <li><a class="nav-link scrollto" href="{{ route('home') }}/#about">{{ __('About') }}</a></li>
+        <li><a class="nav-link scrollto" href="{{ route('home') }}/#services">{{ __('Services') }}</a></li>
+        <li><a class="nav-link scrollto " href="{{ route('home') }}/#portfolio">{{ __('Portfolio') }}</a></li>
+        <li><a class="nav-link scrollto" href="{{ route('home') }}/#team">{{ __('Team') }}</a></li>
         <li class="dropdown"><a href="#">
 
             <span>

@@ -2,13 +2,13 @@
 
 namespace App\Widgets;
 
-use App\Message;
+use App\Employee;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Widgets\BaseDimmer;
 
-class Messages extends BaseDimmer
+class Employees extends BaseDimmer
 {
     /**
      * The configuration array.
@@ -23,18 +23,18 @@ class Messages extends BaseDimmer
      */
     public function run()
     {
-        $count = Message::count();
-        $string = trans_choice('Messages', $count);
+        $count = Employee::count();
+        $string = trans_choice('Employees', $count);
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-news',
+            'icon'   => 'voyager-people',
             'title'  => "{$count} {$string}",
-            'text'   => __('You have :count in your database. Click below to view all messages.', ['count' => $count, 'string' => Str::lower($string)]),
+            'text'   => __('You have :count in your database. Click below to view all employees.', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
-                'text' => __('View all Messages'),
-                'link' => route('voyager.messages.index'),
+                'text' => __('View all Employees'),
+                'link' => route('voyager.employees.index'),
             ],
-            'image' => asset('images/backgroud/paperWithpenDark.jpg'),
+            'image' => asset('images/backgroud/teamHands.jpg'),
         ]));
     }
 

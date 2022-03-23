@@ -25,7 +25,7 @@
 
               <div>
                 <i class="bi bi-envelope"></i>
-                <p>{{ __('info@example.com') }}</p>
+                <p>{{ __('info@spacetech.com') }}</p>
               </div>
 
               <div>
