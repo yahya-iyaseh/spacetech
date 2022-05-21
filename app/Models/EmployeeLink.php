@@ -1,13 +1,13 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-use App\Employee;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
 
 class EmployeeLink extends Model
 {
+    use HasFactory;
     public function employee()
     {
         return $this->belongsTo(Employee::class);

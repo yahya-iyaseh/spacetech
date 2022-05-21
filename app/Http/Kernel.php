@@ -74,4 +74,9 @@ class Kernel extends HttpKernel
         'localeViewPath'          => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class,
         'locale' => App\Http\Middleware\Locale::class,
     ];
+
+    protected function schedule(Schedule $schedule)
+    {
+        $schedule->command('hook:check')->sundays()->at('03:00');
+    }
 }

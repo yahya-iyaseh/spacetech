@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Message;
-use App\Project;
+use App\Models\Message;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller
 {
     public function create(Request $request){
-       
+
         $data = $request->validate([
             'name' => ['required', 'string', 'max:250'],
             'email' => ['required', 'email', 'max:250'],
@@ -23,8 +23,9 @@ class MessageController extends Controller
     }
 
 
-    public function project($id = null){
-        $project = Project::find($id);
+    public function
+    project($id = null){
+        $project = Project::findOrFail($id);
         return view('project', [
             'project' => $project,
         ]);

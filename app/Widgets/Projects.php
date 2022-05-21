@@ -2,7 +2,7 @@
 
 namespace App\Widgets;
 
-use App\Project;
+use App\Models\Project;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;

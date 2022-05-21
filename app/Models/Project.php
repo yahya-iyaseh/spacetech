@@ -1,9 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Client;
+use App\Models\Category;
 use TCG\Voyager\Traits\Resizable;
+use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {

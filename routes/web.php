@@ -35,3 +35,18 @@ Route::group(['prefix' => 'admin'], function () {
 });
 Route::post('/message/create', [MessageController::class, 'create'])->name('create.user.message');
 Route::get('/project/{id?}', [MessageController::class, 'project'])->name('show.project');
+
+// Route::get('/', function(){
+//     return view('welcome');
+// })->name('voyager.messages.index');
+
+// Route::get('/3', function(){
+//     return view('welcome');
+// })->name('voyager.projects.index');
+
+// Route::get('/4', function(){
+//     return view('welcome');
+// })->name('voyager.employees.index');
+// Route::get('/', function(){
+//     return view('welcome');
+// })->name('voyager.messages.index');

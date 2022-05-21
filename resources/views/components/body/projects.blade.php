@@ -15,7 +15,7 @@
 
            </li>
 
-           @foreach (App\Category::all() as $category)
+           @foreach (App\Models\Category::all() as $category)
              <li data-filter=".filter-{{ $category->name }}">
                @if (App::getLocale() == 'ar')
                  {{ $category->ar_name }}
